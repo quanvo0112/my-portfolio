@@ -36,11 +36,9 @@ jobs:
         run: npm run build
 
       - name: Configure Pages
+        # Requires Settings -> Pages -> Source = "GitHub Actions" (one-time,
+        # manual). GITHUB_TOKEN is not allowed to create the Pages site itself.
         uses: actions/configure-pages@v5
-        with:
-          # Creates the Pages site if the repo doesn't have one yet, instead of
-          # failing with "Get Pages site failed / Not Found".
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
