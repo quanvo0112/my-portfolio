@@ -1,5 +1,5 @@
 export const profile = {
-  name: 'Vo Hoang Anh Quan',
+  name: 'Võ Hoàng Anh Quân',
   handle: 'K1llV',
   role: 'IT Student · Information Security',
   bio: 'Sinh viên Công nghệ thông tin, chuyên ngành An toàn thông tin tại Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM. Đam mê cybersecurity, CTF và phát triển phần mềm — hiện làm việc với Python, các dự án web, và đang học Spring Boot, ReactJS.',
@@ -11,7 +11,7 @@ export const contact = {
   email: 'vohoanganhquan.work@gmail.com',
   github: 'https://github.com/quanvo0112',
   linkedin: 'https://www.linkedin.com/in/vohoanganhquan2004/',
-  cv: 'https://drive.google.com/file/d/1JUjLBTuLojjUO-ARRKSqZgQGu1RHz_Po/view?usp=sharing',
+  cv: 'https://drive.google.com/file/d/1tS4v9OCKH-VWR9Pq-2EdDBM1tUj4Nkjf/view?usp=sharing',
 };
 
 export const education = {
@@ -50,15 +50,31 @@ export const skills = [
 export const projects = [
   {
     perm: '-rwxr-xr-x',
-    name: 'flight-ticket-booking',
-    title: 'Flight Ticket Booking System',
-    role: 'Backend Developer',
-    context: 'Đồ án cuối kỳ — Nhập môn Công nghệ phần mềm (dự án nhóm)',
-    size: '4.2K',
-    date: '2025',
-    desc: 'Nền tảng đặt vé máy bay: frontend React + Vite, backend Node.js kết nối MongoDB Atlas, xác thực JWT. Luồng thanh toán ở mức mock, chưa tích hợp cổng thanh toán thật.',
-    stack: ['React', 'Vite', 'Node.js', 'MongoDB'],
-    repo: 'https://github.com/hydroq04/AirplaneTicketSeller',
+    name: 'yoca',
+    title: 'YOCA — Yet another On-chain Analysis',
+    role: 'Full-stack Developer',
+    context: 'Dự án tốt nghiệp — Nhóm 6 thành viên',
+    size: '42.8M',
+    date: '09/2025–15/08/2026',
+    desc: 'Nền tảng phân tích on-chain trên Solana: khám phá thị trường, phân tích token và ví, phát hiện wash trading, theo dõi cảnh báo và hỗ trợ giải thích dữ liệu bằng AI.',
+    stack: [
+      'React 19',
+      'Vite 7',
+      'TypeScript',
+      'Carbon Design System',
+      'Hono 4',
+      'Node.js',
+      'PostgreSQL',
+      'Drizzle ORM',
+      'Redis',
+      'Solana',
+      'Google Gemini',
+      'Stripe',
+      'Prometheus',
+      'Grafana',
+      'Docker',
+    ],
+    repo: 'https://github.com/YocaHCMUS/Yoca',
   },
   {
     perm: '-rwxr-xr-x',
