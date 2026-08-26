@@ -1,0 +1,46 @@
+{
+  "title": "Chốt bố cục Security Audit Dossier",
+  "question": "Bố cục nào nên trở thành north star cho bản triển khai?",
+  "options": [
+    {
+      "id": "balanced-split",
+      "label": "Balanced Split",
+      "kicker": "DIRECTION COMP",
+      "lineage": "executive summary paired with selected evidence",
+      "thesis": "Danh tính và dự án mạnh nhất có trọng lượng ngang nhau trong màn hình đầu.",
+      "palette": ["#f7f6f2", "#171717", "#d24a2f"],
+      "materials": ["report stock", "audit tabs", "hairline rules"],
+      "viewport": "Profile ở trái, YOCA evidence ở phải, CV và Email nằm ngay dưới định vị nghề nghiệp.",
+      "risk": "Cân bằng và rõ ràng, nhưng ít tạo cảm giác project-first hơn hai phương án còn lại.",
+      "hero": ".impeccable/mocks/decision/security-audit-dossier.png",
+      "comp": ".impeccable/mocks/decision/security-audit-dossier.png"
+    },
+    {
+      "id": "project-first",
+      "label": "Project First",
+      "lineage": "flagship evidence sheet with candidate sidebar",
+      "thesis": "YOCA dẫn đầu câu chuyện, hồ sơ ứng viên đóng vai trò executive context.",
+      "palette": ["#f7f6f2", "#171717", "#d24a2f"],
+      "materials": ["report stock", "evidence folder", "index tabs"],
+      "viewport": "YOCA chiếm hai phần ba bên trái; tên, role, CV và Email nằm trong summary rail bên phải.",
+      "risk": "Dự án nổi bật hơn, nhưng danh tính ứng viên không còn là điểm nhìn đầu tiên.",
+      "hero": ".impeccable/mocks/dossier-project-first.png",
+      "comp": ".impeccable/mocks/dossier-project-first.png"
+    },
+    {
+      "id": "recruiter-index",
+      "label": "Recruiter Index",
+      "lineage": "three-band evidence index",
+      "thesis": "Một scan path thẳng từ danh tính đến dự án rồi toàn bộ bằng chứng còn lại.",
+      "palette": ["#f7f6f2", "#171717", "#d24a2f"],
+      "materials": ["report stock", "folio bands", "evidence index"],
+      "viewport": "Tên ở band lớn đầu tiên, YOCA ở band thứ hai, CTF, Skills, Education và Contact lộ diện ngay bên dưới.",
+      "risk": "Khả năng quét rất cao nhưng dễ tiến gần bố cục dashboard nếu các band bị chia quá cứng.",
+      "hero": ".impeccable/mocks/dossier-recruiter-index.png",
+      "comp": ".impeccable/mocks/dossier-recruiter-index.png"
+    }
+  ],
+  "reroll": false,
+  "canon": false,
+  "steer": false
+}

@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-26T00:00:00+07:00",
+  "title": "Design System: K1llV Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "signal-orange": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#e15b35",
+        "tonalRamp": [
+          "oklch(15% 0.05 38)",
+          "oklch(25% 0.08 38)",
+          "oklch(38% 0.11 38)",
+          "oklch(52% 0.14 38)",
+          "oklch(65% 0.17 38)",
+          "oklch(76% 0.12 38)",
+          "oklch(86% 0.07 38)",
+          "oklch(95% 0.025 38)"
+        ]
+      },
+      "report-paper": {
+        "role": "neutral",
+        "displayName": "Report Paper",
+        "canonical": "#f7f6f2",
+        "tonalRamp": [
+          "oklch(15% 0.006 85)",
+          "oklch(27% 0.007 85)",
+          "oklch(40% 0.008 85)",
+          "oklch(53% 0.009 85)",
+          "oklch(66% 0.01 85)",
+          "oklch(78% 0.011 85)",
+          "oklch(89% 0.012 85)",
+          "oklch(95% 0.013 85)"
+        ]
+      },
+      "raised-paper": {
+        "role": "neutral",
+        "displayName": "Raised Paper",
+        "canonical": "#fbfaf7",
+        "tonalRamp": [
+          "oklch(15% 0.004 85)",
+          "oklch(27% 0.005 85)",
+          "oklch(40% 0.006 85)",
+          "oklch(53% 0.007 85)",
+          "oklch(66% 0.008 85)",
+          "oklch(79% 0.009 85)",
+          "oklch(90% 0.01 85)",
+          "oklch(96% 0.011 85)"
+        ]
+      },
+      "dossier-ink": {
+        "role": "neutral",
+        "displayName": "Dossier Ink",
+        "canonical": "#1a1919",
+        "tonalRamp": [
+          "oklch(15% 0.004 25)",
+          "oklch(26% 0.005 25)",
+          "oklch(38% 0.006 25)",
+          "oklch(51% 0.007 25)",
+          "oklch(64% 0.008 25)",
+          "oklch(76% 0.008 25)",
+          "oklch(87% 0.007 25)",
+          "oklch(95% 0.005 25)"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#66635f",
+        "tonalRamp": [
+          "oklch(15% 0.008 65)",
+          "oklch(27% 0.01 65)",
+          "oklch(39% 0.012 65)",
+          "oklch(52% 0.014 65)",
+          "oklch(65% 0.015 65)",
+          "oklch(77% 0.013 65)",
+          "oklch(88% 0.01 65)",
+          "oklch(95% 0.006 65)"
+        ]
+      },
+      "hairline-rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "#d2d1d0",
+        "tonalRamp": [
+          "oklch(15% 0.002 65)",
+          "oklch(27% 0.003 65)",
+          "oklch(40% 0.004 65)",
+          "oklch(53% 0.005 65)",
+          "oklch(66% 0.006 65)",
+          "oklch(78% 0.006 65)",
+          "oklch(89% 0.005 65)",
+          "oklch(95% 0.003 65)"
+        ]
+      },
+      "strong-rule": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#8e8b86",
+        "tonalRamp": [
+          "oklch(15% 0.005 65)",
+          "oklch(27% 0.007 65)",
+          "oklch(40% 0.009 65)",
+          "oklch(53% 0.011 65)",
+          "oklch(66% 0.012 65)",
+          "oklch(78% 0.01 65)",
+          "oklch(89% 0.007 65)",
+          "oklch(95% 0.004 65)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Two-line candidate identity and dominant evidence names."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project, record, and content titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable explanations and evidence descriptions."
+      },
+      "label": {
+        "displayName": "Technical Label",
+        "purpose": "Dates, statuses, rails, facts, and folio-like metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "inset-dossier-outline",
+        "value": "inset 0 0 0 1px var(--ink)",
+        "purpose": "Draws a precise evidence-folder boundary without lifting it off the report stock."
+      },
+      {
+        "name": "full-bleed-signal-wash",
+        "value": "0 0 0 100vmax rgb(225 91 53 / 0.055)",
+        "purpose": "Extends the contact tint to the viewport edge while its content remains on-grid."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "180ms ease",
+        "purpose": "Color, background, underline, arrow, and press feedback."
+      },
+      {
+        "name": "document-reveal",
+        "value": "560ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "A short blur-to-sharp, clipped upward reveal for records entering the viewport."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1120px"
+      },
+      {
+        "name": "single-column",
+        "value": "820px"
+      },
+      {
+        "name": "small-mobile",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single dominant action, typically opening the CV.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">VIEW CV <span class=\"ds-btn-primary__arrow\" aria-hidden=\"true\"></span></a>",
+      "css": ".ds-btn-primary { display:inline-flex; min-height:52px; align-items:center; justify-content:center; border:1px solid var(--accent, #e15b35); background:var(--accent, #e15b35); color:var(--paper-raised, #fbfaf7); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:1.05rem; font-weight:600; letter-spacing:.07em; padding:0 34px; text-decoration:none; text-transform:uppercase; transition:background-color 180ms ease, border-color 180ms ease, transform 180ms ease; } .ds-btn-primary:hover { border-color:var(--ink, #1a1919); background:var(--ink, #1a1919); } .ds-btn-primary:focus-visible { outline:3px solid var(--accent, #e15b35); outline-offset:4px; } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary__arrow { position:relative; width:15px; height:15px; margin-left:12px; transition:transform 180ms ease; } .ds-btn-primary__arrow::before { position:absolute; top:1px; right:1px; width:8px; height:8px; border-top:2px solid currentColor; border-right:2px solid currentColor; content:''; } .ds-btn-primary__arrow::after { position:absolute; bottom:3px; left:2px; width:14px; height:2px; background:currentColor; content:''; transform:rotate(-45deg); transform-origin:left center; } .ds-btn-primary:hover .ds-btn-primary__arrow, .ds-btn-primary:focus-visible .ds-btn-primary__arrow { transform:translate(4px, -4px); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A bordered companion action for email and other secondary routes.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">EMAIL ME</a>",
+      "css": ".ds-btn-secondary { display:inline-flex; min-height:52px; align-items:center; justify-content:center; border:1px solid var(--ink, #1a1919); background:transparent; color:var(--ink, #1a1919); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:1.05rem; font-weight:600; letter-spacing:.07em; padding:0 34px; text-decoration:none; text-transform:uppercase; transition:background-color 180ms ease, color 180ms ease, transform 180ms ease; } .ds-btn-secondary:hover { background:var(--ink, #1a1919); color:var(--paper-raised, #fbfaf7); } .ds-btn-secondary:focus-visible { outline:3px solid var(--accent, #e15b35); outline-offset:4px; } .ds-btn-secondary:active { transform:translateY(1px); }"
+    },
+    {
+      "name": "Navigation Index",
+      "kind": "nav",
+      "refersTo": "navigation-tab",
+      "description": "The compact six-anchor dossier index with a signal-orange active rule.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Portfolio sections\"><a class=\"ds-nav__tab ds-nav__tab--active\" href=\"#whoami\">WHOAMI</a><a class=\"ds-nav__tab\" href=\"#projects\">PROJECTS</a><a class=\"ds-nav__tab\" href=\"#ctf\">CTF.LOG</a></nav>",
+      "css": ".ds-nav { display:flex; min-height:70px; align-items:stretch; overflow-x:auto; } .ds-nav__tab { position:relative; display:flex; flex:0 0 auto; min-width:44px; align-items:center; background:transparent; color:var(--muted, #66635f); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:.95rem; font-weight:600; letter-spacing:.06em; padding:0 18px; text-decoration:none; transition:color 180ms ease, background-color 180ms ease; } .ds-nav__tab::after { position:absolute; right:18px; bottom:0; left:18px; height:3px; background:var(--accent, #e15b35); content:''; opacity:0; transform:scaleX(.25); transition:opacity 180ms ease, transform 180ms ease; } .ds-nav__tab:hover, .ds-nav__tab--active { color:var(--ink, #1a1919); background:rgb(26 25 25 / .035); } .ds-nav__tab--active::after { opacity:1; transform:scaleX(1); } .ds-nav__tab:focus-visible { outline:3px solid var(--accent, #e15b35); outline-offset:-3px; }"
+    },
+    {
+      "name": "Technology Tag",
+      "kind": "chip",
+      "refersTo": "technology-tag",
+      "description": "A non-interactive outlined label for verified project technology.",
+      "html": "<span class=\"ds-tech-tag\">TYPESCRIPT</span>",
+      "css": ".ds-tech-tag { display:inline-block; border:1px solid var(--rule-strong, #8e8b86); background:transparent; color:var(--ink, #1a1919); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:.9rem; font-weight:600; letter-spacing:.035em; padding:5px 10px; text-transform:uppercase; }"
+    },
+    {
+      "name": "Evidence Folder",
+      "kind": "custom",
+      "refersTo": "evidence-folder",
+      "description": "The signature flagship-project dossier with clipped indexing tabs and a stepped seam.",
+      "html": "<article class=\"ds-evidence\"><div class=\"ds-evidence__tabs\"><span class=\"ds-evidence__tab ds-evidence__tab--active\">SELECTED EVIDENCE</span><span class=\"ds-evidence__tab\">TECH STACK</span></div><div class=\"ds-evidence__body\"><div class=\"ds-evidence__date\">09/2025–08/2026</div><h3>YOCA</h3><p class=\"ds-evidence__role\">FLAGSHIP PROJECT / FULL-STACK DEVELOPER</p><p class=\"ds-evidence__copy\">A verified project summary belongs here, followed by a direct repository route.</p><a class=\"ds-evidence__link\" href=\"#\">REVIEW REPOSITORY</a></div></article>",
+      "css": ".ds-evidence { position:relative; min-width:0; margin-top:39px; color:var(--ink, #1a1919); } .ds-evidence__tabs { position:absolute; top:-39px; left:18px; display:flex; align-items:end; font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:.9rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; } .ds-evidence__tab { min-width:126px; clip-path:polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%, 0 10px); box-shadow:inset 0 0 0 1px var(--rule-strong, #8e8b86); color:var(--muted, #66635f); padding:10px 16px 8px; text-align:center; } .ds-evidence__tab + .ds-evidence__tab { margin-left:-1px; } .ds-evidence__tab--active { min-width:190px; background:var(--paper-raised, #fbfaf7); color:var(--ink, #1a1919); padding-top:16px; } .ds-evidence__body { position:relative; background:rgb(251 250 247 / .72); clip-path:polygon(0 0, calc(100% - 42px) 0, calc(100% - 42px) 12px, 100% 12px, 100% 100%, 0 100%); box-shadow:inset 0 0 0 1px var(--ink, #1a1919); padding:40px; } .ds-evidence__date { border-bottom:1px solid var(--accent, #e15b35); color:var(--accent, #e15b35); font-family:var(--mono, 'Cascadia Code', monospace); font-size:.72rem; padding-bottom:12px; text-align:right; text-transform:uppercase; } .ds-evidence h3 { margin:26px 0 0; font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:5rem; font-weight:600; letter-spacing:-.035em; line-height:.78; text-transform:uppercase; } .ds-evidence__role { margin:20px 0 0; font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:1.7rem; line-height:1; } .ds-evidence__copy { max-width:62ch; margin:22px 0; font-family:var(--body, 'Aptos', 'Segoe UI', sans-serif); font-size:.95rem; line-height:1.55; } .ds-evidence__link { display:inline-block; border-bottom:1px solid currentColor; color:var(--ink, #1a1919); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-weight:600; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; transition:color 180ms ease, border-color 180ms ease; } .ds-evidence__link:hover { border-color:var(--accent, #e15b35); color:var(--accent, #e15b35); } .ds-evidence__link:focus-visible { outline:3px solid var(--accent, #e15b35); outline-offset:4px; }"
+    },
+    {
+      "name": "Project Record",
+      "kind": "card",
+      "description": "A ruled, square-cornered evidence record for supporting projects.",
+      "html": "<article class=\"ds-project\"><div class=\"ds-project__meta\"><span>2025</span><span>BACKEND DEVELOPER</span></div><div><h3>DRAWING APPLICATION</h3><p class=\"ds-project__context\">ACADEMIC TEAM PROJECT</p><p class=\"ds-project__copy\">A concise factual description of the contribution and implementation.</p><a class=\"ds-project__link\" href=\"#\">VIEW REPOSITORY</a></div></article>",
+      "css": ".ds-project { display:grid; min-height:300px; grid-template-rows:auto 1fr; gap:48px; border-top:1px solid var(--rule, #d2d1d0); border-bottom:1px solid var(--rule, #d2d1d0); background:transparent; color:var(--ink, #1a1919); padding:40px; } .ds-project__meta { display:flex; gap:16px; color:var(--muted, #66635f); font-family:var(--mono, 'Cascadia Code', monospace); font-size:.72rem; text-transform:uppercase; } .ds-project h3 { max-width:16ch; margin:0; font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:3.4rem; font-weight:600; letter-spacing:-.025em; line-height:.92; text-transform:uppercase; } .ds-project__context { margin:16px 0 0; color:var(--accent, #e15b35); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-weight:600; letter-spacing:.04em; text-transform:uppercase; } .ds-project__copy { max-width:66ch; color:#3d3a37; font-family:var(--body, 'Aptos', 'Segoe UI', sans-serif); line-height:1.55; } .ds-project__link { display:inline-block; margin-top:20px; border-bottom:1px solid currentColor; color:var(--ink, #1a1919); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-weight:600; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; transition:color 180ms ease, border-color 180ms ease; } .ds-project__link:hover { border-color:var(--accent, #e15b35); color:var(--accent, #e15b35); } .ds-project__link:focus-visible { outline:3px solid var(--accent, #e15b35); outline-offset:4px; }"
+    },
+    {
+      "name": "Contact Row",
+      "kind": "custom",
+      "description": "A ruled recruiter route with a technical host label and prominent destination.",
+      "html": "<div class=\"ds-contact-row\"><span>EMAIL</span><a href=\"mailto:hello@example.com\">hello@example.com</a></div>",
+      "css": ".ds-contact-row { display:grid; grid-template-columns:110px minmax(0, 1fr); gap:24px; align-items:baseline; border-top:1px solid var(--ink, #1a1919); border-bottom:1px solid var(--rule-strong, #8e8b86); padding:22px 0; } .ds-contact-row span { color:var(--muted, #66635f); font-family:var(--mono, 'Cascadia Code', monospace); font-size:.72rem; text-transform:uppercase; } .ds-contact-row a { overflow-wrap:anywhere; color:var(--ink, #1a1919); font-family:var(--display, 'Barlow Condensed', 'Arial Narrow', sans-serif); font-size:1.8rem; font-weight:600; text-decoration:none; transition:color 180ms ease; } .ds-contact-row a:hover { color:var(--accent, #e15b35); } .ds-contact-row a:focus-visible { outline:3px solid var(--accent, #e15b35); outline-offset:4px; }"
+    },
+    {
+      "name": "CLI Command Field",
+      "kind": "input",
+      "description": "The borderless command line used only inside the dark optional appendix.",
+      "html": "<form class=\"ds-cli-field\"><span aria-hidden=\"true\">guest@k1llv:~$</span><input type=\"text\" placeholder=\"type a command...\" aria-label=\"Terminal command input\"></form>",
+      "css": ".ds-cli-field { display:flex; align-items:center; gap:10px; border:1px solid var(--ink, #1a1919); border-top-color:#4d4a47; background:var(--ink, #1a1919); color:var(--paper-raised, #fbfaf7); padding:16px 34px; } .ds-cli-field span { flex:0 0 auto; color:#9ac8a1; font-family:var(--mono, 'Cascadia Code', monospace); font-size:.8rem; } .ds-cli-field input { min-width:0; flex:1; border:0; background:transparent; caret-color:var(--accent, #e15b35); color:var(--paper-raised, #fbfaf7); font-family:var(--mono, 'Cascadia Code', monospace); font-size:.8rem; } .ds-cli-field input::placeholder { color:#8c8882; } .ds-cli-field input:hover { color:#fff; } .ds-cli-field input:focus-visible { outline:2px solid var(--accent, #e15b35); outline-offset:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Security Audit Dossier",
+    "overview": "The portfolio should feel like a carefully assembled evidence file: off-white report stock, condensed black headings, narrow technical annotations, hairline dividers, and a single signal-orange marking system. Its authority comes from legible hierarchy and inspectable work, not from hacker theatrics. The paper texture and folder cuts make the page tactile while leaving the content unmistakably digital and interactive.\n\nThe first impression is balanced and recruiter-first. Candidate identity, role, bio, CV, and email share the opening view with the strongest project evidence; later sections continue as ruled records, lists, and evidence groups. The terminal survives only as a subordinate appendix after the complete professional story.",
+    "keyCharacteristics": [
+      "Off-white report stock with subtle grain rather than a sterile white canvas.",
+      "Heavy condensed headings paired with calm humanist body copy and sparse monospace metadata.",
+      "Signal orange used selectively for actions, focus, evidence markers, and active state.",
+      "Square controls, hairline rules, angled tabs, and a stepped folder seam.",
+      "A balanced profile/evidence opening that becomes a strict single column on narrow screens.",
+      "Six exact public anchors; the optional CLI never competes with the primary portfolio narrative."
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "Signal Orange is the only interface accent; do not introduce a competing brand hue outside the subordinate CLI output syntax.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Before Panels Rule",
+        "body": "Default to the continuous report-paper canvas and ruled regions; use raised paper or a faint orange wash only when evidence hierarchy requires a distinct surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed Authority Rule",
+        "body": "Use Barlow Condensed for identity, hierarchy, actions, and scannable evidence names; never use it for long explanatory paragraphs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Monospace Annotation Rule",
+        "body": "Monospace is metadata, not atmosphere. Outside the CLI appendix, it appears only in short factual annotations.",
+        "section": "typography"
+      },
+      {
+        "name": "The Recruiter Sequence Rule",
+        "body": "Identity and primary actions precede flagship evidence in reading order, followed by projects, public security writing, skills, education, contact, and only then the CLI appendix.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Evidence Rule",
+        "body": "Surfaces are separated by rules, tone, and clipping; never add generic floating-card shadows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Cut, Don't Round Rule",
+        "body": "When a surface needs a distinctive silhouette, use a purposeful tab, notch, or clipped seam; do not soften the dossier with rounded cards or pills.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep Signal Orange rare and attach it to primary action, active state, focus, or verifiable evidence.",
+      "Do preserve all six public anchors and their recruiter-first reading sequence.",
+      "Do express dossier character through paper texture, hairline rules, clipped tabs, folio-like labels, and asymmetric evidence grids.",
+      "Do stack profile before flagship evidence below 820px and keep primary actions easy to find and keyboard-operable.",
+      "Do keep the CLI after the professional narrative as an optional appendix."
+    ],
+    "donts": [
+      "Don't turn the site into a full-screen terminal, neon hacker dashboard, detective board, or faux classified document.",
+      "Don't add rounded cards, pill-shaped tags, gradients, generic drop shadows, or extra accent hues to the main dossier.",
+      "Don't promote decorative tabs, labels, or metadata into invented claims, classifications, achievements, metrics, or specialties.",
+      "Don't rasterize portfolio text, navigation, controls, or project evidence.",
+      "Don't hide core profile or evidence content behind interaction."
+    ]
+  }
+}

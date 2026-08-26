@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { profile, contact, education, projects, skills, writeups } from '../data/content';
 
 const WELCOME = [
-  { kind: 'accent', text: "k1llv-shell v1.0.0 — type `help` for the command list." },
+  { kind: 'accent', text: "k1llv-shell v1.0.0 - type `help` for the command list." },
 ];
 
 function runCommand(raw) {
@@ -23,7 +23,7 @@ function runCommand(raw) {
         { kind: 'out', text: '  resume     mo CV o tab moi' },
         { kind: 'out', text: '  pwd date   linh tinh' },
         { kind: 'out', text: '  clear      xoa man hinh' },
-        { kind: 'magenta', text: '  (co vai easter egg — thu doan xem)' },
+        { kind: 'magenta', text: '  (co vai easter egg - thu doan xem)' },
       ];
 
     case cmd === 'whoami':
@@ -38,7 +38,7 @@ function runCommand(raw) {
         { kind: 'out', text: `total ${projects.length}` },
         ...projects.map((p) => ({
           kind: 'accent',
-          text: `${p.perm}  ${p.size}  ${p.date}  ${p.name}/  — ${p.role}`,
+          text: `${p.perm}  ${p.size}  ${p.date}  ${p.name}/  - ${p.role}`,
         })),
         { kind: 'out', text: 'chi tiet + repo link o section ~/projects phia tren.' },
       ];
@@ -46,7 +46,7 @@ function runCommand(raw) {
     case cmd === 'cat ctf' || cmd === 'cat ctf/writeups.log' || cmd === 'ctf':
       return writeups.map((w) => ({
         kind: 'magenta',
-        text: `${w.date}  [SOLVED]  ${w.event} — ${w.url}`,
+        text: `${w.date}  [SOLVED]  ${w.event} - ${w.url}`,
       }));
 
     case cmd === 'skills' || cmd === 'grep skills':
@@ -57,7 +57,7 @@ function runCommand(raw) {
 
     case cmd === 'edu' || cmd === 'education' || cmd === 'cat education.md':
       return [
-        { kind: 'accent', text: `${education.degree} — ${education.major}` },
+        { kind: 'accent', text: `${education.degree} - ${education.major}` },
         { kind: 'out', text: education.school },
         { kind: 'ok', text: `GPA ${education.gpa} · tot nghiep ${education.graduation}` },
         {
@@ -95,7 +95,7 @@ function runCommand(raw) {
 
     case cmd === 'hack' || cmd.startsWith('hack '):
       return [
-        { kind: 'accent', text: 'ACCESS GRANTED — enhancing GUI interface using visual basic...' },
+        { kind: 'accent', text: 'ACCESS GRANTED - enhancing GUI interface using visual basic...' },
         { kind: 'magenta', text: '[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%' },
         { kind: 'err', text: 'just kidding. hack the box, not other people.' },
       ];
@@ -158,11 +158,14 @@ export default function InteractiveCli() {
   };
 
   return (
-    <section className="cli" aria-label="Interactive terminal">
+    <section className="cli" aria-labelledby="cli-title">
       <div className="cli__head">
-        <span>bash — interactive</span>
+        <div>
+          <h2 id="cli-title">Interactive shell</h2>
+          <span className="cli__label">Optional appendix</span>
+        </div>
         <span className="cli__hint">
-          try <kbd>help</kbd> · history with <kbd>↑</kbd> <kbd>↓</kbd>
+          try <kbd>help</kbd> / history with arrow keys
         </span>
       </div>
 

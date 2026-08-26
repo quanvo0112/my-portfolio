@@ -1,53 +1,43 @@
 import { projects } from '../data/content';
-import Prompt from './Prompt';
 import Reveal from './Reveal';
 
 export default function Projects() {
   return (
-    <section className="section" id="section-projects" aria-labelledby="tab-projects">
-      <Prompt path="~" command="ls -la ./projects" />
+    <section className="section projects-section" id="projects" aria-labelledby="projects-title">
+      <header className="section-heading">
+        <h2 id="projects-title">Selected projects</h2>
+        <p>Software products built across web, desktop, mobile and on-chain systems.</p>
+      </header>
 
-      <p className="ls__total">total {projects.length} · drwxr-xr-x quan staff</p>
-
-      <div className="ls">
+      <div className="project-list">
         {projects.map((project, i) => (
-          <Reveal className="ls__row" key={project.name} delay={i * 70}>
-            <span className="ls__cols">
-              <span className="ls__perm">{project.perm}</span>
-              <span className="ls__size">{project.size}</span>
-              <span className="ls__date">{project.date}</span>
-            </span>
-
-            <span>
-              <span className="ls__name">{project.name}/</span>
-              <span className="ls__meta">
-                <b className="ls__role">{project.role}</b> — {project.title} · {project.context}
-              </span>
-
-              <span className="ls__desc">{project.desc}</span>
-
-              <span className="ls__stack">
+          <Reveal as="article" className={`project ${i === 0 ? 'project--lead' : ''}`} key={project.name} delay={i * 60}>
+            <div className="project__meta">
+              <span>{project.date}</span>
+              <span>{project.role}</span>
+            </div>
+            <div className="project__body">
+              <h3>{project.title}</h3>
+              <p className="project__context">{project.context}</p>
+              <p className="project__desc">{project.desc}</p>
+              <div className="tag-list">
                 {project.stack.map((tech) => (
-                  <span className="tag" key={tech}>
-                    {tech}
-                  </span>
+                  <span key={tech}>{tech}</span>
                 ))}
-              </span>
-
+              </div>
               <a
-                className="ls__link"
+                className="text-link"
                 href={project.repo}
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                → repo (team)
+                View repository
               </a>
-            </span>
+            </div>
           </Reveal>
         ))}
       </div>
-
-      <p className="note"># tất cả đều là dự án nhóm — repo thuộc về teammate, tôi là contributor.</p>
+      <p className="section-note">Tất cả là dự án nhóm. Repository thuộc về teammate, tôi tham gia với vai trò contributor.</p>
     </section>
   );
 }

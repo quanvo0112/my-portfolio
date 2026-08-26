@@ -1,45 +1,30 @@
 import { education } from '../data/content';
-import Prompt from './Prompt';
 import Reveal from './Reveal';
 
 export default function Education() {
   return (
-    <section className="section" id="section-education" aria-labelledby="tab-education">
-      <Prompt path="~" command="cat education.md" />
-
-      <Reveal className="md">
-        <h2 className="md__h">Education</h2>
-        <ul className="md__list">
-          <li>
-            <span className="md__key">degree:</span>{' '}
-            <span className="md__val">{education.degree}</span>
-          </li>
-          <li>
-            <span className="md__key">major:</span> <span className="md__val">{education.major}</span>
-          </li>
-          <li>
-            <span className="md__key">school:</span>{' '}
-            <span className="md__val">{education.school}</span>
-          </li>
-          <li>
-            <span className="md__key">gpa:</span>{' '}
-            <span className="md__val md__val--hl">{education.gpa}</span>
-          </li>
-          <li>
-            <span className="md__key">graduation:</span>{' '}
-            <span className="md__val">{education.graduation}</span>
-          </li>
-        </ul>
-
-        <h3 className="md__sub">Languages</h3>
-        <ul className="md__list">
+    <section className="section education-section" id="education" aria-labelledby="education-title">
+      <header className="section-heading">
+        <h2 id="education-title">Education</h2>
+      </header>
+      <Reveal className="education-record">
+        <div className="education-record__main">
+          <h3>{education.degree}</h3>
+          <p>{education.major}</p>
+          <p>{education.school}</p>
+        </div>
+        <dl className="education-record__facts">
+          <div><dt>GPA</dt><dd>{education.gpa}</dd></div>
+          <div><dt>Graduation</dt><dd>{education.graduation}</dd></div>
+        </dl>
+        <div className="education-record__languages">
+          <h3>Languages</h3>
+          <dl>
           {education.languages.map((lang) => (
-            <li key={lang.name}>
-              <span className="md__key">{lang.name}:</span>{' '}
-              <span className="md__val">{lang.level}</span>
-            </li>
+            <div key={lang.name}><dt>{lang.name}</dt><dd>{lang.level}</dd></div>
           ))}
-        </ul>
+          </dl>
+        </div>
       </Reveal>
     </section>
   );

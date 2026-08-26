@@ -8,7 +8,7 @@ export default function TitleBar({ path }) {
       </div>
 
       <div className="titlebar__path">
-        guest@k1llv — <b>{path}</b> — zsh
+        guest@k1llv - <b>{path}</b> - zsh
       </div>
 
       <div className="titlebar__status" aria-hidden="true">

@@ -2,7 +2,7 @@ export const profile = {
   name: 'Võ Hoàng Anh Quân',
   handle: 'K1llV',
   role: 'IT Student · Information Security',
-  bio: 'Sinh viên Công nghệ thông tin, chuyên ngành An toàn thông tin tại Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM. Đam mê cybersecurity, CTF và phát triển phần mềm — hiện làm việc với Python, các dự án web, và đang học Spring Boot, ReactJS.',
+  bio: 'Sinh viên Công nghệ thông tin, chuyên ngành An toàn thông tin tại Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM. Đam mê cybersecurity, CTF và phát triển phần mềm - hiện làm việc với Python, các dự án web, và đang học Spring Boot, ReactJS.',
   location: 'Ho Chi Minh City, Vietnam',
   blog: 'https://quanvo0112.github.io/',
 };
@@ -45,17 +45,17 @@ export const skills = [
   },
 ];
 
-// `perm` / `size` are cosmetic — they make the `ls -la` listing read like a
+// `perm` / `size` are cosmetic. They make the `ls -la` listing read like a
 // real directory dump instead of a table with invented columns.
 export const projects = [
   {
     perm: '-rwxr-xr-x',
     name: 'yoca',
-    title: 'YOCA — Yet another On-chain Analysis',
+    title: 'YOCA - Yet another On-chain Analysis',
     role: 'Full-stack Developer',
-    context: 'Dự án tốt nghiệp — Nhóm 6 thành viên',
+    context: 'Dự án tốt nghiệp - Nhóm 6 thành viên',
     size: '42.8M',
-    date: '09/2025–15/08/2026',
+    date: '09/2025-15/08/2026',
     desc: 'Nền tảng phân tích on-chain trên Solana: khám phá thị trường, phân tích token và ví, phát hiện wash trading, theo dõi cảnh báo và hỗ trợ giải thích dữ liệu bằng AI.',
     stack: [
       'React 19',
@@ -93,7 +93,7 @@ export const projects = [
     name: 'capybara-vibe-pos',
     title: 'Cafe & Restaurant POS System',
     role: 'Fullstack Developer',
-    context: 'Dự án nhóm học thuật — "Capybara Vibe"',
+    context: 'Dự án nhóm học thuật - "Capybara Vibe"',
     size: '6.1K',
     date: '2025',
     desc: 'Hệ thống POS cho quán café / nhà hàng nhỏ. Kiến trúc MVVM + Clean Architecture trên WinUI 3 / .NET 8, PostgreSQL chạy qua Docker, EF Core Migrations, có unit test.',
@@ -114,7 +114,7 @@ export const projects = [
   },
 ];
 
-// These live on a separate Jekyll blog repo — absolute URLs only.
+// These live on a separate Jekyll blog repo. Absolute URLs only.
 export const writeups = [
   {
     date: '2026-04-13',
@@ -136,6 +136,6 @@ export const bootLines = [
   { level: 'ok', text: 'starting profile service [whoami]' },
   { level: 'warn', text: 'coffee reserves running low' },
   { level: 'ok', text: 'indexing 4 projects, 2 ctf writeups' },
-  { level: 'ok', text: 'net: link up — github, linkedin reachable' },
+  { level: 'ok', text: 'net: link up - github, linkedin reachable' },
   { level: 'ok', text: 'session ready. welcome, guest.' },
 ];

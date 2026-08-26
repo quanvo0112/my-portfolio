@@ -1,31 +1,26 @@
 import { skills } from '../data/content';
-import Prompt from './Prompt';
 import Reveal from './Reveal';
 
 export default function Skills() {
   return (
-    <section className="section" id="section-skills" aria-labelledby="tab-skills">
-      <Prompt path="~" command='grep -r "skills" ./stack --color=always' />
-
-      <div className="grep">
+    <section className="section skills-section" id="skills" aria-labelledby="skills-title">
+      <header className="section-heading">
+        <h2 id="skills-title">Technical stack</h2>
+        <p>Tools I currently use across software delivery and security-focused learning.</p>
+      </header>
+      <div className="skill-groups">
         {skills.map((group, i) => (
-          <Reveal className="grep__group" key={group.group} delay={i * 70}>
-            <p className="grep__label">
-              ./stack/<b>{group.group.toLowerCase()}</b>.conf: {group.items.length} match
-              {group.items.length > 1 ? 'es' : ''}
-            </p>
-            <div className="grep__items">
+          <Reveal as="article" className="skill-group" key={group.group} delay={i * 70}>
+            <h3>{group.group}</h3>
+            <div className="skill-group__items">
               {group.items.map((item) => (
-                <span className="skill" key={item}>
-                  {item}
-                </span>
+                <span key={item}>{item}</span>
               ))}
             </div>
           </Reveal>
         ))}
       </div>
-
-      <p className="note"># đang học thêm: Spring Boot, ReactJS.</p>
+      <p className="section-note">Currently learning more about Spring Boot and ReactJS.</p>
     </section>
   );
 }

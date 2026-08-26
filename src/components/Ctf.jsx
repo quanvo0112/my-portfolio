@@ -1,31 +1,28 @@
 import { writeups, profile } from '../data/content';
-import Prompt from './Prompt';
 import Reveal from './Reveal';
 
 export default function Ctf() {
   return (
-    <section className="section" id="section-ctf" aria-labelledby="tab-ctf">
-      <Prompt path="~" command="cat ctf/writeups.log" />
-
-      <div className="log">
+    <section className="section ctf-section" id="ctf" aria-labelledby="ctf-title">
+      <header className="section-heading">
+        <h2 id="ctf-title">CTF writeups</h2>
+        <p>Public notes from security challenges, hosted on my technical blog.</p>
+      </header>
+      <div className="writeup-list">
         {writeups.map((entry, i) => (
-          <Reveal className="log__row" key={entry.url} delay={i * 80}>
-            <span className="log__date">{entry.date}</span>
-            <span className="log__level">[SOLVED]</span>
-            <span className="log__event">{entry.event}</span>
-            <a className="log__title" href={entry.url} target="_blank" rel="noreferrer noopener">
-              {entry.title} ↗
+          <Reveal as="article" className="writeup" key={entry.url} delay={i * 80}>
+            <time dateTime={entry.date}>{entry.date}</time>
+            <div>
+              <span>{entry.event}</span>
+              <h3>{entry.title}</h3>
+            </div>
+            <a className="text-link" href={entry.url} target="_blank" rel="noreferrer noopener">
+              Read writeup
             </a>
           </Reveal>
         ))}
       </div>
-
-      <p className="note">
-        # writeups host trên blog:{' '}
-        <a href={profile.blog} target="_blank" rel="noreferrer noopener">
-          {profile.blog}
-        </a>
-      </p>
+      <a className="text-link section-link" href={profile.blog} target="_blank" rel="noreferrer noopener">Visit technical blog</a>
     </section>
   );
 }

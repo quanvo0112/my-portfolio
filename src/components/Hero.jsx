@@ -1,47 +1,50 @@
-import { useTypewriter } from '../hooks/useTypewriter';
-import { profile, contact } from '../data/content';
-import Prompt from './Prompt';
-import Reveal from './Reveal';
+import { profile, contact, projects } from '../data/content';
 
-export default function Hero({ booted }) {
-  const [typed, done] = useTypewriter('whoami --verbose', { start: booted, speed: 52, delay: 220 });
+export default function Hero() {
+  const flagship = projects[0];
 
   return (
-    <section className="section" id="section-whoami" aria-labelledby="tab-whoami">
-      <Prompt path="~" typed={typed} cursor={!done} />
+    <section className="hero" id="whoami" aria-labelledby="hero-title">
+      <aside className="hero__rail" aria-label="Profile summary">
+        <span>Profile / 2026</span>
+        <span>Focus / Information Security</span>
+        <span>Status / Open to internships</span>
+      </aside>
 
-      <Reveal delay={0}>
-        <h1 className="hero__name">
-          {profile.name} <span className="hero__handle">({profile.handle})</span>
-        </h1>
-      </Reveal>
-
-      <Reveal delay={60}>
+      <div className="hero__profile">
+        <h1 id="hero-title" className="hero__name">{profile.name}</h1>
         <p className="hero__role">{profile.role}</p>
-      </Reveal>
-
-      <Reveal delay={120}>
         <p className="hero__bio">{profile.bio}</p>
-      </Reveal>
+        <div className="hero__actions">
+          <a className="btn btn--primary" href={contact.cv} target="_blank" rel="noreferrer noopener">
+            View CV <span className="btn__arrow" aria-hidden="true" />
+          </a>
+          <a className="btn" href={`mailto:${contact.email}`}>Email me</a>
+        </div>
+      </div>
 
-      <Reveal delay={180} className="hero__meta">
-        <span className="chip">📍 {profile.location}</span>
-        <span className="chip">🎓 GPA 3.38 / 4.0</span>
-        <span className="chip">🚩 CTF player</span>
-        <span className="chip">🔓 Open to internships</span>
-      </Reveal>
-
-      <Reveal delay={240} className="hero__actions">
-        <a className="btn btn--primary" href={contact.cv} target="_blank" rel="noreferrer noopener">
-          ./download_cv.sh
-        </a>
-        <a className="btn" href={`mailto:${contact.email}`}>
-          mail -s "hi"
-        </a>
-        <a className="btn" href={contact.github} target="_blank" rel="noreferrer noopener">
-          git remote -v
-        </a>
-      </Reveal>
+      <article className="evidence-folder" aria-labelledby="flagship-title">
+        <div className="evidence-tabs" aria-hidden="true">
+          <span className="is-active">Selected evidence</span>
+          <span>Contribution</span>
+          <span>Tech stack</span>
+        </div>
+        <div className="evidence-folder__body">
+          <div className="evidence-folder__topline">
+            <span>{flagship.date}</span>
+          </div>
+          <h2 id="flagship-title">{flagship.name}</h2>
+          <p className="evidence-folder__role">Flagship project / {flagship.role}</p>
+          <p className="evidence-folder__context">{flagship.context}</p>
+          <p className="evidence-folder__desc">{flagship.desc}</p>
+          <div className="tag-list" aria-label="YOCA technology stack">
+            {flagship.stack.slice(0, 7).map((tech) => <span key={tech}>{tech}</span>)}
+          </div>
+          <a className="text-link" href={flagship.repo} target="_blank" rel="noreferrer noopener">
+            Review repository
+          </a>
+        </div>
+      </article>
     </section>
   );
 }
