@@ -80,8 +80,10 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
-        <span>© {new Date().getFullYear()} Võ Hoàng Anh Quân</span>
-        <span>React + Vite</span>
+        <span>
+          © {new Date().getFullYear()} Võ Hoàng Anh Quân · <b>K1llV</b>
+        </span>
+        <span>Built with React + Vite · end of dossier</span>
       </footer>
     </>
   );

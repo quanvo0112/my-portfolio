@@ -15,16 +15,16 @@ function runCommand(raw, writeups) {
     case cmd === 'help':
       return [
         { kind: 'accent', text: 'available commands:' },
-        { kind: 'out', text: '  whoami     ai la thang nay' },
-        { kind: 'out', text: '  ls         liet ke projects' },
+        { kind: 'out', text: '  whoami     who this is' },
+        { kind: 'out', text: '  ls         list projects' },
         { kind: 'out', text: '  cat ctf    ctf writeups' },
         { kind: 'out', text: '  skills     tech stack' },
-        { kind: 'out', text: '  edu        hoc van' },
+        { kind: 'out', text: '  edu        education' },
         { kind: 'out', text: '  contact    email / github / linkedin' },
-        { kind: 'out', text: '  resume     mo CV o tab moi' },
-        { kind: 'out', text: '  pwd date   linh tinh' },
-        { kind: 'out', text: '  clear      xoa man hinh' },
-        { kind: 'magenta', text: '  (co vai easter egg - thu doan xem)' },
+        { kind: 'out', text: '  resume     open CV in a new tab' },
+        { kind: 'out', text: '  pwd date   misc' },
+        { kind: 'out', text: '  clear      clear the screen' },
+        { kind: 'magenta', text: '  (a few easter eggs - try guessing)' },
       ];
 
     case cmd === 'whoami':
@@ -41,7 +41,7 @@ function runCommand(raw, writeups) {
           kind: 'accent',
           text: `${p.perm}  ${p.size}  ${p.date}  ${p.name}/  - ${p.role}`,
         })),
-        { kind: 'out', text: 'chi tiet + repo link o section ~/projects phia tren.' },
+        { kind: 'out', text: 'details + repo links in ~/projects section above.' },
       ];
 
     case cmd === 'cat ctf' || cmd === 'cat ctf/writeups.log' || cmd === 'ctf':
@@ -60,7 +60,7 @@ function runCommand(raw, writeups) {
       return [
         { kind: 'accent', text: `${education.degree} - ${education.major}` },
         { kind: 'out', text: education.school },
-        { kind: 'ok', text: `GPA ${education.gpa} · tot nghiep ${education.graduation}` },
+        { kind: 'ok', text: `GPA ${education.gpa} · graduation ${education.graduation}` },
         {
           kind: 'out',
           text: education.languages.map((l) => `${l.name}: ${l.level}`).join('  |  '),
@@ -91,13 +91,13 @@ function runCommand(raw, writeups) {
     case head === 'sudo':
       return [
         { kind: 'err', text: `guest is not in the sudoers file. This incident will be reported.` },
-        { kind: 'out', text: '(dung lo, khong bao ai dau)' },
+        { kind: 'out', text: "(don't worry, no one will know)" },
       ];
 
     case cmd === 'hack' || cmd.startsWith('hack '):
       return [
         { kind: 'accent', text: 'ACCESS GRANTED - enhancing GUI interface using visual basic...' },
-        { kind: 'magenta', text: '[▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%' },
+        { kind: 'magenta', text: '[||||||||||||||||||||] 100%' },
         { kind: 'err', text: 'just kidding. hack the box, not other people.' },
       ];
 
@@ -105,7 +105,7 @@ function runCommand(raw, writeups) {
       return [{ kind: 'err', text: 'nice try :) permission denied' }];
 
     case cmd === 'exit' || cmd === 'logout':
-      return [{ kind: 'out', text: 'khong thoat duoc dau, day la trang web ma.' }];
+      return [{ kind: 'out', text: 'you cannot escape, this is a web page.' }];
 
     case cmd === '':
       return [];

@@ -37,7 +37,7 @@ export default function Projects() {
           </Reveal>
         ))}
       </div>
-      <p className="section-note">Tất cả là dự án nhóm. Repository thuộc về teammate, tôi tham gia với vai trò contributor.</p>
+      <p className="section-note section-note--disclose">All of these are group projects. Repositories belong to my teammates; I contributed as a team member.</p>
     </section>
   );
 }

@@ -1,59 +1,91 @@
 # my-portfolio
 
-Portfolio cá nhân của **Vo Hoang Anh Quan (K1llV)** — giao diện terminal/CLI, xây bằng **Vite + React**.
+Personal portfolio of **Vo Hoang Anh Quan (K1llV)** — a terminal/CLI-styled site built with **Vite + React**.
 
 🔗 https://quanvo0112.github.io/my-portfolio/
 
-## Chạy local
+## Run locally
 
 ```bash
 npm install
 npm run dev      # http://localhost:5173/my-portfolio/
 ```
 
-Build và xem thử bản production:
+Build and preview the production bundle:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-> Dev server phục vụ ở `/my-portfolio/` chứ không phải `/`, vì `base` trong `vite.config.js` được đặt là `/my-portfolio/`.
+> The dev server serves at `/my-portfolio/` rather than `/` because `base` in `vite.config.js` is set to `/my-portfolio/`.
 
 ## Deploy
 
-Push lên branch `main` là xong — GitHub Actions (`.github/workflows/deploy.yml`) tự build và deploy.
+Push to the `main` branch — GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys automatically.
 
-### ⚠️ Bước thủ công bắt buộc (làm một lần)
+### ⚠️ One-time manual step
 
-Vào **repo Settings → Pages → Build and deployment → Source** và chọn **"GitHub Actions"**.
+In **repo Settings → Pages → Build and deployment → Source**, choose **"GitHub Actions"**.
 
-Nếu bỏ qua bước này, workflow sẽ chạy nhưng deploy thất bại (hoặc Pages vẫn phục vụ nội dung cũ từ branch).
+If you skip this, the workflow runs but the deploy fails (or Pages keeps serving stale content from the branch).
 
-## Cấu trúc
+## Project structure
 
 ```
-.github/workflows/deploy.yml   GitHub Actions: build + deploy Pages
-public/                        favicon.ico, favicon-16/32.png, apple-touch-icon.png, og-image.png
-src/
-  components/                  TitleBar, Tabs, BootSequence, Hero, Projects,
-                               Ctf, Skills, Education, Contact, InteractiveCli, Prompt, Reveal
-  hooks/                       useReveal (IntersectionObserver), useTypewriter
-  data/content.js              toàn bộ nội dung trang (sửa ở đây, không sửa trong component)
-  styles/index.css             theme terminal + animation
-  App.jsx  main.jsx
-index.html                     meta Open Graph / Twitter Card, favicon
-vite.config.js                 base: '/my-portfolio/'
+.
+├── .github
+│   └── workflows
+│       └── deploy.yml         GitHub Actions: build + deploy to Pages
+├── public
+│   ├── assets
+│   │   └── report-stock-texture.png
+│   ├── fonts
+│   │   ├── barlow-condensed-semibold.ttf
+│   │   └── barlow-condensed-regular.ttf
+│   ├── favicon.ico
+│   ├── favicon-16.png
+│   ├── favicon-32.png
+│   ├── favicon.svg
+│   ├── apple-touch-icon.png
+│   ├── og-image.png
+│   └── og-image-v2.png
+├── src
+│   ├── components
+│   │   ├── TitleBar.jsx          window chrome bar
+│   │   ├── Tabs.jsx              top navigation tabs
+│   │   ├── BootSequence.jsx      CLI startup animation
+│   │   ├── Hero.jsx              intro + flagship project evidence
+│   │   ├── Projects.jsx          project listings
+│   │   ├── Ctf.jsx               CTF writeups
+│   │   ├── Skills.jsx            skills groups
+│   │   ├── Education.jsx         education + languages
+│   │   ├── Contact.jsx           contact links
+│   │   ├── InteractiveCli.jsx    interactive terminal
+│   │   ├── Prompt.jsx            prompt row
+│   │   └── Reveal.jsx            scroll-reveal wrapper
+│   ├── hooks
+│   │   ├── useReveal.js          IntersectionObserver scroll reveals
+│   │   ├── useTypewriter.js      typewriter effect
+│   │   └── useLiveWriteups.js    remote writeup loading
+│   ├── data
+│   │   └── content.js            all page content (edit here)
+│   ├── styles
+│   │   └── index.css             terminal theme + animations
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html                    Open Graph / Twitter Card meta, favicon
+└── vite.config.js                base: '/my-portfolio/'
 ```
 
-## Sửa nội dung
+## Editing content
 
-Mọi text (bio, projects, skills, CTF writeups, contact) nằm trong [`src/data/content.js`](src/data/content.js).
+All text (bio, projects, skills, CTF writeups, contact) lives in [`src/data/content.js`](src/data/content.js).
 
 ## Troubleshooting
 
-| Triệu chứng | Nguyên nhân thường gặp |
+| Symptom | Likely cause |
 | --- | --- |
-| Trang trắng, console báo 404 file `.js`/`.css` | `base` trong `vite.config.js` sai — phải đúng `'/my-portfolio/'` |
-| Actions chạy xanh nhưng site không đổi | Settings → Pages → Source chưa đặt "GitHub Actions" |
-| Ảnh Open Graph không hiện khi share | `og:image` phải là URL tuyệt đối `https://...`, và cần thời gian để scraper cache lại |
+| Blank page, console 404 on `.js`/`.css` files | `base` in `vite.config.js` is wrong — must be `'/my-portfolio/'` |
+| Actions run green but the site doesn't update | Settings → Pages → Source isn't set to "GitHub Actions" |
+| Open Graph image missing when sharing | `og:image` must be an absolute URL like `https://...`, and the scraper needs time to re-cache |

@@ -24,24 +24,19 @@ export default function Hero() {
       </div>
 
       <article className="evidence-folder" aria-labelledby="flagship-title">
-        <div className="evidence-tabs" aria-hidden="true">
-          <span className="is-active">Selected evidence</span>
-          <span>Contribution</span>
-          <span>Tech stack</span>
-        </div>
         <div className="evidence-folder__body">
           <div className="evidence-folder__topline">
             <span>{flagship.date}</span>
           </div>
-          <h2 id="flagship-title">{flagship.name}</h2>
+          <h2 id="flagship-title">{flagship.title}</h2>
           <p className="evidence-folder__role">Flagship project / {flagship.role}</p>
           <p className="evidence-folder__context">{flagship.context}</p>
           <p className="evidence-folder__desc">{flagship.desc}</p>
-          <div className="tag-list" aria-label="YOCA technology stack">
+          <div className="tag-list" aria-label="Flagship technology stack">
             {flagship.stack.slice(0, 7).map((tech) => <span key={tech}>{tech}</span>)}
           </div>
           <a className="text-link" href={flagship.repo} target="_blank" rel="noreferrer noopener">
-            Review repository
+            View repository
           </a>
         </div>
       </article>
