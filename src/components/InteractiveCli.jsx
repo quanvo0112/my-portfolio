@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { profile, contact, education, projects, skills, writeups } from '../data/content';
+import { profile, contact, education, projects, skills } from '../data/content';
+import { useLiveWriteups } from '../hooks/useLiveWriteups';
 
 const WELCOME = [
   { kind: 'accent', text: "k1llv-shell v1.0.0 - type `help` for the command list." },
 ];
 
-function runCommand(raw) {
+function runCommand(raw, writeups) {
   const input = raw.trim();
   const cmd = input.toLowerCase();
   const head = cmd.split(/\s+/)[0];
@@ -115,6 +116,7 @@ function runCommand(raw) {
 }
 
 export default function InteractiveCli() {
+  const { data: writeups } = useLiveWriteups();
   const [lines, setLines] = useState(WELCOME);
   const [value, setValue] = useState('');
   const [history, setHistory] = useState([]);
@@ -138,7 +140,7 @@ export default function InteractiveCli() {
       return;
     }
 
-    setLines((prev) => [...prev, { kind: 'cmd', text: `guest@k1llv:~$ ${input}` }, ...runCommand(input)]);
+    setLines((prev) => [...prev, { kind: 'cmd', text: `guest@k1llv:~$ ${input}` }, ...runCommand(input, writeups)]);
     if (input.trim()) setHistory((h) => [input, ...h]);
     setValue('');
     setCursorIdx(-1);

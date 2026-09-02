@@ -1,7 +1,9 @@
-import { writeups, profile } from '../data/content';
+import { profile } from '../data/content';
+import { useLiveWriteups } from '../hooks/useLiveWriteups';
 import Reveal from './Reveal';
 
 export default function Ctf() {
+  const { data: writeups } = useLiveWriteups();
   return (
     <section className="section ctf-section" id="ctf" aria-labelledby="ctf-title">
       <header className="section-heading">

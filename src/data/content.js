@@ -117,16 +117,28 @@ export const projects = [
 // These live on a separate Jekyll blog repo. Absolute URLs only.
 export const writeups = [
   {
-    date: '2026-04-13',
-    event: 'DawgCTF',
-    title: 'DawgCTF Writeup',
-    url: 'https://quanvo0112.github.io/posts/dawgctf-writeup/',
+    date: '2026-08-24',
+    event: 'BrunnerCTF',
+    title: 'BrunnerCTF 2026 - Global',
+    url: 'https://quanvo0112.github.io/posts/brunnerctf2026-writeup/',
   },
   {
-    date: '2026-05-15',
-    event: 'CyberGameCTF',
-    title: 'CyberGameCTF Writeup',
+    date: '2026-06-15',
+    event: 'HCMUS-CTF',
+    title: 'HCMUS-CTF 2026 Qualification',
+    url: 'https://quanvo0112.github.io/posts/hcmusctf-writeup/',
+  },
+  {
+    date: '2026-05-20',
+    event: 'CyberGame',
+    title: 'CyberGame 2026',
     url: 'https://quanvo0112.github.io/posts/cybergamectf-writeup/',
+  },
+  {
+    date: '2026-04-13',
+    event: 'DawgCTF',
+    title: 'DawgCTF 2026',
+    url: 'https://quanvo0112.github.io/posts/dawgctf-writeup/',
   },
 ];
 
@@ -135,7 +147,7 @@ export const bootLines = [
   { level: 'ok', text: 'mount /dev/quan on / type ext4 (rw,relatime)' },
   { level: 'ok', text: 'starting profile service [whoami]' },
   { level: 'warn', text: 'coffee reserves running low' },
-  { level: 'ok', text: 'indexing 4 projects, 2 ctf writeups' },
+  { level: 'ok', text: 'indexing 4 projects, 4 ctf writeups' },
   { level: 'ok', text: 'net: link up - github, linkedin reachable' },
   { level: 'ok', text: 'session ready. welcome, guest.' },
 ];
